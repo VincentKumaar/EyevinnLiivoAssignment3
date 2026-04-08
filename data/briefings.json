@@ -1,0 +1,81 @@
+{
+  "briefings": [
+    {
+      "id": "briefing-2026-04-08",
+      "date": "2026-04-08",
+      "generatedAt": "2026-04-08T09:10:25.346Z",
+      "title": "Cyberbriefing 2026-04-08",
+      "summary": "Dagens lägesbild fokuserar på de hot som snabbast kan påverka affärskritiska processer i svenska verksamheter. Prioritera åtgärderna med högst verksamhetsrisk först.",
+      "threats": [
+        {
+          "id": "2026-04-08-cloud-misconfiguration-0",
+          "title": "Dataläckor via felkonfigurerad molnlagring",
+          "happened": "Nya incidenter visar att öppna lagringsytor och felaktiga IAM-regler fortsatt orsakar exponering av kunddata.",
+          "severity": "medel",
+          "recommendation": "Kör en snabb kontroll av publika buckets, åtkomstpolicys och loggning. Prioritera data med personuppgifter.",
+          "source": "Cloud-leverantörers säkerhetsnotiser",
+          "relevanceByIndustry": {
+            "finans": "Hög påverkan på grund av känslig data och regulatorisk rapporteringsplikt.",
+            "vård": "Hög påverkan. Patientdata innebär hög risk och höga krav vid incident.",
+            "retail": "Medel till hög påverkan vid kund- och transaktionsdata i molnplattformar.",
+            "offentlig sektor": "Hög påverkan med fokus på medborgardata och förtroende.",
+            "industri": "Medel påverkan för ritningar, leveranskedja och kundkontrakt.",
+            "teknik": "Hög påverkan i SaaS- och plattformsbolag med multitenant-data.",
+            "övrigt": "Medel påverkan. Relevans styrs av hur mycket data ni lagrar i molnet."
+          }
+        },
+        {
+          "id": "2026-04-08-ot-intrusion-attempts-1",
+          "title": "Fler intrångsförsök mot industriella styrsystem",
+          "happened": "Säkerhetsaktörer ser ökad skanning och riktade försök mot exponerade OT-enheter i Norden.",
+          "severity": "hög",
+          "recommendation": "Separera IT och OT strikt, stäng onödiga portar och prioritera övervakning av fjärranslutningar.",
+          "source": "ICS-CERT och regionala SOC-rapporter",
+          "relevanceByIndustry": {
+            "finans": "Låg till medel påverkan. Främst relevant för fastighets- och infrastruktursystem.",
+            "vård": "Medel påverkan för sjukhus med medicinteknisk utrustning på separata nät.",
+            "retail": "Låg till medel påverkan. Relevant om ni driver egna lager- eller automationssystem.",
+            "offentlig sektor": "Medel till hög påverkan i samhällskritisk infrastruktur.",
+            "industri": "Kritisk påverkan. Detta är ett direkt hot mot produktion och leverans.",
+            "teknik": "Medel påverkan för datacenter- och infrastrukturdrift.",
+            "övrigt": "Låg till medel påverkan beroende på fysisk driftmiljö."
+          }
+        },
+        {
+          "id": "2026-04-08-managed-service-ransomware-2",
+          "title": "Ransomware via underleverantör av IT-drift",
+          "happened": "En driftleverantör i Norden rapporterade intrång där angripare krypterade kunddata och krävde lösensumma. Händelsen visar att tredje parts åtkomst fortfarande är en vanlig väg in.",
+          "severity": "kritisk",
+          "recommendation": "Gå igenom era leverantörskopplingar idag. Säkerställ MFA, minimera behörigheter och verifiera att ni har en testad återställningsplan.",
+          "source": "CERT-SE och europeiska incidentrapporter",
+          "relevanceByIndustry": {
+            "finans": "Hög påverkan. Ni har ofta många externa integrationer och regulatoriska krav på tillgänglighet.",
+            "vård": "Hög påverkan. Driftstopp kan slå direkt mot vårdflöden och journalsystem.",
+            "retail": "Medel till hög påverkan. Betalflöden och e-handel kan påverkas vid leverantörsstopp.",
+            "offentlig sektor": "Hög påverkan. Kritiska samhällstjänster och leverantörsberoenden gör detta extra relevant.",
+            "industri": "Hög påverkan om leverantören har åtkomst till produktions- eller OT-miljö.",
+            "teknik": "Hög påverkan. Många teknikbolag är beroende av outsourcad drift och CI/CD-tjänster.",
+            "övrigt": "Medel påverkan. Relevansen beror på hur central leverantören är för er dagliga drift."
+          }
+        },
+        {
+          "id": "2026-04-08-new-mobile-banking-malware-3",
+          "title": "Ny mobil malware riktad mot BankID-flöden",
+          "happened": "En ny variant av mobil malware försöker manipulera användare i realtid under legitimering och betalning.",
+          "severity": "hög",
+          "recommendation": "Skärp kundkommunikation kring social engineering och följ upp ovanliga transaktionsmönster i realtid.",
+          "source": "Finansiella hotintelligensnätverk",
+          "relevanceByIndustry": {
+            "finans": "Kritisk påverkan. Direkt kopplat till kundbedrägerier och varumärkesrisk.",
+            "vård": "Låg till medel påverkan. Främst relevant där mobila identitetsflöden används brett.",
+            "retail": "Medel påverkan via mobilbetalningar och kundkontoövertaganden.",
+            "offentlig sektor": "Medel påverkan i e-tjänster med stark autentisering.",
+            "industri": "Låg påverkan i kärnverksamheten, men relevant för personalens konton.",
+            "teknik": "Medel påverkan i appar med autentisering och betalningsfunktioner.",
+            "övrigt": "Låg till medel påverkan beroende på kundernas mobila transaktionsflöden."
+          }
+        }
+      ]
+    }
+  ]
+}

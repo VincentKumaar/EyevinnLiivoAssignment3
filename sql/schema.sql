@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS briefings (
+  id TEXT PRIMARY KEY,
+  date DATE UNIQUE NOT NULL,
+  generated_at TIMESTAMPTZ NOT NULL,
+  title TEXT NOT NULL,
+  summary TEXT NOT NULL,
+  threats JSONB NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS subscribers (
+  email TEXT PRIMARY KEY,
+  industry TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL
+);
