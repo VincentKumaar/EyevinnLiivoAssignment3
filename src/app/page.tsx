@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { SubscribeForm } from '@/components/SubscribeForm';
 import { ThreatDashboard } from '@/components/ThreatDashboard';
 import { formatSwedishDate } from '@/lib/date';
@@ -37,9 +38,9 @@ export default async function HomePage() {
             ))}
           </div>
         )}
-        <a className="inline-link" href="/archive">
+        <Link className="inline-link" href="/archive">
           Öppna hela arkivet
-        </a>
+        </Link>
       </section>
     </main>
   );
